@@ -1,0 +1,30 @@
+{
+  "name": "pegjs-coffee",
+  "version": "0.1.0",
+  "description": "A PEG.js plugin for using CoffeeScript with the post-0.7 pegjs plugin API",
+  "main": "lib/pegjs-coffee.js",
+  "bin": "bin/pegcoffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ttilley/pegjs-coffee.git"
+  },
+  "keywords": [
+    "peg",
+    "pegjs",
+    "coffee",
+    "coffeescript",
+    "plugin"
+  ],
+  "author": "Travis Tilley",
+  "license": "BSD",
+  "engines": {
+    "node": ">= 0.8"
+  },
+  "dependencies": {
+    "pegjs": "git://github.com/dmajda/pegjs.git#master",
+    "coffee-script": "~1.6.2"
+  }
+}

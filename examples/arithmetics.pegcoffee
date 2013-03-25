@@ -1,0 +1,22 @@
+/*
+ * Classic example grammar, which recognizes simple arithmetic expressions like
+ * "2*(3+4)". The parser generated from this grammar then computes their value.
+ */
+
+start
+  = additive
+
+additive
+  = left:multiplicative "+" right:additive { left + right }
+  / multiplicative
+
+multiplicative
+  = left:primary "*" right:multiplicative { left * right }
+  / primary
+
+primary
+  = integer
+  / "(" additive:additive ")" { additive }
+
+integer "integer"
+  = digits:$[0-9]+ { parseInt digits, 10 }
