@@ -1,15 +1,12 @@
 {
-  "name": "pegjs-coffee",
+  "name": "pegcoffee",
   "version": "0.1.0",
   "description": "A PEG.js plugin for using CoffeeScript with the post-0.7 pegjs plugin API",
-  "main": "lib/pegjs-coffee.js",
+  "main": "lib/pegcoffee.js",
   "bin": "bin/pegcoffee",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ttilley/pegjs-coffee.git"
+    "url": "git://github.com/ttilley/pegcoffee.git"
   },
   "keywords": [
     "peg",
@@ -25,6 +22,14 @@
   },
   "dependencies": {
     "pegjs": "git://github.com/dmajda/pegjs.git#master",
-    "coffee-script": "~1.6.2"
+    "coffee-script": "git://github.com/jashkenas/coffee-script.git#master"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-markdown": "~0.2.0",
+    "grunt-coffee-redux": "~0.2.3",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-watch": "~0.3.1"
   }
 }

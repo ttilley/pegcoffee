@@ -1,0 +1,25 @@
+{
+  "curly": false,
+  "eqeqeq": false,
+  "forin": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "nonew": true,
+  "strict": false,
+  "trailing": true,
+
+  "boss": false,
+  "eqnull": true,
+  "es5": true,
+  "esnext": false,
+  "evil": false,
+  "expr": true,
+  "sub": true,
+  "supernew": true,
+
+  "globals": {
+    "require": false,
+    "module": true
+  }
+}
