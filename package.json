@@ -15,6 +15,9 @@
     "coffeescript",
     "plugin"
   ],
+  "scripts": {
+    "test": "node_modules/.bin/grunt test"
+  },
   "author": "Travis Tilley",
   "license": "BSD",
   "engines": {
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
     "grunt-markdown": "~0.2.0",
     "grunt-coffee-redux": "~0.2.3",
     "grunt-contrib-clean": "~0.4.0",
