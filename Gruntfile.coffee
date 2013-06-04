@@ -25,12 +25,21 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ['src/**/*.coffee']
-        tasks: ['build']
+        files: [
+          'src/**/*.coffee'
+          'test/**/*.coffee'
+        ]
+        tasks: ['test', 'build']
       js:
         files: 'lib/pegcoffee.js'
         tasks: ['lint']
 
+    mochacli:
+      options:
+        require: ['should']
+        compilers: ['coffee:coffee-script']
+        reporter: 'spec'
+      coffee: ['test/*.coffee']
 
   grunt.loadNpmTasks task for task in [
     'grunt-contrib-watch'
@@ -38,9 +47,11 @@ module.exports = (grunt) ->
     'grunt-coffee-redux'
     'grunt-contrib-jshint'
     'grunt-markdown'
+    'grunt-mocha-cli'
   ]
 
+  grunt.registerTask 'test', ['mochacli']
   grunt.registerTask 'build', ['clean', 'coffeeredux']
   grunt.registerTask 'lint', ['jshint']
 
-  grunt.registerTask 'default', ['build', 'lint']
+  grunt.registerTask 'default', ['test', 'build', 'lint']
