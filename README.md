@@ -1,6 +1,8 @@
 pegcoffee
 =========
 
+[![Build Status](https://travis-ci.org/ttilley/pegcoffee.png)](https://travis-ci.org/ttilley/pegcoffee)
+
 pegcoffee is a PEG.js plugin for the post-0.7 plugin API that enables the use
 of CoffeeScript instead of JavaScript in your grammar files. Additionally, your
 code is given its own scope (the semi-hidden `peg$coffee$scope` object), giving
